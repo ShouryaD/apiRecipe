@@ -4,7 +4,7 @@ import { useLocation, Link } from 'react-router-dom'
 const ViewReceipe = () => {
   let location = useLocation()
   console.log(location.state.recipe)
-  let recipe = location.state.recipe
+  let recipe = location.state.recipe;
   return (
     <>
       {/* <div className='m-0 p-0 row container m-auto bg-warning'>
