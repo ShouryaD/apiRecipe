@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Receipe = () => {
     let [receipe, setReceipe] = useState([])
