@@ -5,6 +5,8 @@ const ViewReceipe = () => {
   let location = useLocation()
   console.log(location.state.recipe)
   let recipe = location.state.recipe;
+  let arr = Object.entries(recipe.totalNutrients);
+  console.log(arr)
   return (
     <>
       {/* <div className='m-0 p-0 row container m-auto bg-warning'>
@@ -47,6 +49,21 @@ const ViewReceipe = () => {
               <li>{ele}</li>
             ))}
           </ul>
+        </div>
+
+        <div>
+          <table>
+            
+             {arr.map(([key,value])=>{
+              return <tr>
+                <th>{key}</th>
+                <td>{value.label}</td>
+                <td>{value.quantity}</td>
+                <td>{value.unit}</td>
+              </tr>
+             })}
+            
+          </table>
         </div>
       </div>
     </>
